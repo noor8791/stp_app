@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/player.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+	<div id="left">
+		<video id="video_player">
+			<source id="video_src" src="https://status.desi/image/Motivational%20positive%20soch%20status%20video.mp4"></source>
+		</video>
+		<div id="prograss_box">
+			<div id="prograss_bar"></div>
+		</div>
+		<div id="control">
+			<div id="timing">
+				<p id="v_timing">00:00/00:00</p>
+			</div>
+			<div id="play_tools">
+				<i class="fa-solid fa-arrow-left" id="left_btn"></i>
+				<i class="fa-solid fa-circle-play" id="play_btn"></i>
+				<i class="fa-solid fa-arrow-right" id="right_btn"></i>
+			</div>
+			<div id="other_tools">
+				<div id="vol_box">
+					<input type="range" min="0" max="1" step="0.1" id="vol_control" style="display:none">
+				    <i class="fa-solid fa-volume-high" id="volume"></i>
+				</div>
+
+				<div id="speed_box">
+					<input type="range" min="0" max="2" step="0.25" id="speed_control" style="display:none;">
+				    <i class="fa-sharp fa-solid fa-gauge-simple" id="speed_icon"></i>
+				</div>
+				
+				<i class="fas fa-expand" id="full_screen"></i>
+			</div>
+		</div>
+	</div>
+	<!-------------------------->
+	<div id="right">
+		<div id="top">
+			<h3>Playlist</h3>
+			<input type="search" placeholder="Search Your Video Here.." id="search">
+			<i class="fas fa-plus-circle" id="open_video_box_btn"></i>
+			<div id="add_video_box">
+				<h2>Add Video</h2>
+				<form>
+					<input type="text" placeholder="Enter Your Video Name.." id="video_name"><br>
+				    <input type="text" placeholder="Enter the Video link" id="video_link"><br>
+				    <button type="submit" id="add_video_btn">Add</button>
+				</form>
+			</div>
+		</div>
+		<div id="bottom">
+			
+
+		</div>
+	</div>
+	<script type="text/javascript" src="js/player.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#left{
+	width: 75%;
+	height: 100vh;
+	border: 1px solid red;
+	float: left;
+}
+#right{
+	width: 25%;
+	height: 100vh;
+	border: 1px solid red;
+	float: right;
+}
+#video_player{
+	width: 100%;
+	height: 86vh;
+}
+#prograss_box{
+	width: 100%;
+	height: 10px;
+	background: white;
+	margin-bottom: 3px;
+}
+#prograss_bar{
+	width: 0%;
+	height: 10px;
+	background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#control{
+	width: 100%;
+	height: 59px;
+	background: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#play_btn{
+	font-size: 40px;
+	color: green;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#left_btn,#right_btn{
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+}
+#play_tools{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#v_timing{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: white;
+	margin-left: 20px;
+}
+#volume,#speed_icon,#full_screen{
+	color: white;
+	font-size: 26px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+#timing,#play_tools,#other_tools{
+    width: 33.33%;
+ 
+}
+#other_tools{
+	display: flex;
+	justify-content: flex-end;
+}
+/*---------------------------------*/
+#top{
+	width: 100%;
+	height: 16%;
+	background-color: #ddd;
+	padding: 14px;
+	position: relative;
+}
+#top h3{
+	font-family: sans-serif;
+	text-align: center;
+    font-size: 23px;
+
+}
+#search{
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	font-family: sans-serif;
+	outline: none;
+	margin-top: 5px;
+	font-size: 15px;
+}
+#open_video_box_btn{
+	font-size: 20px;
+	position: absolute;
+	top: 17px;
+	right: 20px;
+	cursor: pointer;
+}
+#add_video_box{
+	width: 80%;
+	height: auto;
+	border-radius: 10px 0 10px 10px;
+	background: #323232;
+	position: absolute;
+	top: 17px;
+	right: 40px;
+	padding: 20px;
+	display: none;
+}
+#add_video_box h2{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#video_name,#video_link{
+	width: 100%;
+	font-family: sans-serif;
+	outline: none;
+	border: none;
+	padding: 8px;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+#add_video_btn{
+	width: 70px;
+	padding: 5px;
+	font-family: sans-serif;
+	font-size: 15px;
+	border: none;
+	outline: none;
+}
+#bottom{
+	width: 100%;
+	padding: 20px;
+	height: 58%;
+	overflow: auto;
+}
+#main_video_box{
+	width: 100%;
+	background: white;
+	height: auto;
+	box-shadow: 0px 0px 6px #ccc;
+	margin-bottom: 15px;
+}
+#playlist_video_name{
+	width: 100%;
+	padding: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+#video_play_btn{
+	width: 50%;
+	border: none;
+	padding: 8px;
+	font-family: sans-serif;
+	cursor: pointer;
+    background: #4285F4;
+    color: white;
+    outline: none;
+}
+#video_delete_btn{
+	width: 50%;
+	border: none;
+	padding: 8px;
+	font-family: sans-serif;
+	cursor: pointer;
+    background: #EA4335;
+    outline: nene;
+    color: white;
+}
+#vol_control,#speed_control{
+	width: 100px;
+	height: 20px;
+	appearance: none;
+	transform: rotate(270deg);
+	outline: none;
+	background-color: #F22b1d;
+	position: absolute;
+	top: -65px;
+	left: -36px;
+}
+#vol_control::-webkit-slider-thumb{
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: white;
+}
+#speed_control::-webkit-slider-thumb{
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: white;
+}
+#vol_box,#speed_box{
+	width: fit-content;
+	position: relative;
+}
+/*--------responsive page coding----------*/
+@media(max-width:768px)
+{
+	#left{
+		width: 100%;
+		height: 95vh;
+	}
+	#right{
+		width: 100%;
+		height: auto;
+	}
+	#volume,#speed_icon,#full_screen{
+	    font-size: 15px;
+ 	    margin-right: 10px;
+    }
+    #play_btn{
+    	font-size: 30px;
+    }
+    #left_btn,#right_btn{
+    	font-size: 20px;
+    }
+    #v_timing{
+    	font-size: 10px;
+    	margin-left: 10px;
+    }
+}
+@media(max-width:425px)
+{
+	#left{
+        height: auto;
+	}
+}
